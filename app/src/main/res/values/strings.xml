@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ScoreBoard</string>
+    <string name="firstTeamName">Dogs</string>
+    <string name="secondTeamName">Cats</string>
+    <string name="resetScores">Reset Scores</string>
+    <string name="parser">:</string>
+    <string name="addScores">Add Scores</string>
+    <string name="defaultScores">0</string>
+    <string name="firstTeamImage">CatsLogo</string>
+    <string name="secondTeamImage">dogsLogo</string>
+</resources>

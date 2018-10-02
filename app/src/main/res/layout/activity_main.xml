@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/secondTeamImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24"
+        android:src="@drawable/dogs"
+        style="@style/TeamImageStyle"
+        android:contentDescription="@string/secondTeamImage" />
+
+    <ImageView
+        android:id="@+id/secondTeamImage"
+        style="@style/TeamImageStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24"
+        android:src="@drawable/cats"
+        android:contentDescription="@string/firstTeamImage" />
+
+    <TextView
+        android:id="@+id/firstTeamName"
+        android:text="@string/firstTeamName"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        style="@style/TeamNameStyle" />
+
+    <TextView
+        android:id="@+id/firstTeamName2"
+        style="@style/TeamNameStyle"
+        android:text="@string/secondTeamName"
+        app:layout_constraintBottom_toTopOf="@+id/secondTeamImage"
+        app:layout_constraintEnd_toEndOf="@+id/secondTeamImage"
+        app:layout_constraintStart_toStartOf="@+id/secondTeamImage" />
+
+    <Button
+        android:id="@+id/addScoresFor1stTeam"
+        style="@style/AddScoreBtnStyle"
+        android:text="@string/addScores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addScoresFor2ndTeam"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.450" />
+
+    <Button
+        android:id="@+id/addScoresFor2ndTeam"
+        style="@style/AddScoreBtnStyle"
+        android:text="@string/addScores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addScoresFor1stTeam"
+        app:layout_constraintTop_toBottomOf="@+id/secondTeamImage"
+        app:layout_constraintVertical_bias="0.450" />
+
+    <Button
+        android:id="@+id/resetScoresBtn"
+        android:text="@string/resetScores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.883"
+        style="@style/ResetScoresBtnStyle" />
+
+    <TextView
+        android:id="@+id/firstTeamScores"
+        style="@style/ScoreAmountStyle"
+        android:text="@string/defaultScores"
+        app:layout_constraintBottom_toTopOf="@+id/addScoresFor1stTeam"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/parser"
+        style="@style/ParserStyle"
+        android:text="@string/parser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/firstTeamScores"
+         />
+
+    <TextView
+        android:id="@+id/secondTeamScores"
+        style="@style/ScoreAmountStyle"
+        android:text="@string/defaultScores"
+        app:layout_constraintBottom_toTopOf="@+id/addScoresFor2ndTeam"
+        app:layout_constraintEnd_toEndOf="@+id/secondTeamImage"
+        app:layout_constraintStart_toStartOf="@+id/secondTeamImage"
+        app:layout_constraintTop_toBottomOf="@+id/secondTeamImage"
+        app:layout_constraintVertical_bias="0"/>
+
+</android.support.constraint.ConstraintLayout>
